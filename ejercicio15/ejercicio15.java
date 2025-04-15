@@ -10,34 +10,36 @@ public class ejercicio15{
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
 
-        // Solicitar los números al usuario
-        System.out.print("Ingrese el primer número: ");
-        int inicio = sc.nextInt();
+        int incio,fin;
 
-        System.out.print("Ingrese el segundo número: ");
-        int fin = sc.nextInt();
+        System.out.println("ingrese numero inicial:");
+        incio = sc.nextInt();
 
-        // Verificar que el segundo número sea mayor o igual que el primero
-        if (fin >= inicio) {
+        System.out.println("ingrese numero final:");
+        fin = sc.nextInt();
+
+        if (incio<=fin){
             int suma = 0;
-            int contador = 0;
+            int contar = 0;
 
-            System.out.println("Múltiplos de 2 entre " + inicio + " y " + fin + ":");
+            System.out.println("los multiplos de "+incio+" y "+fin+" : ");
 
-            for (int i = inicio; i <= fin; i++) {
-                if (i % 2 == 0) {
+            for (int i = incio; i<=fin; i++ ){
+
+                if (i%2==0){
                     System.out.println(i);
                     suma += i;
-                    contador++;
-                }
+                    contar ++;
+                }    
             }
-
-            System.out.println("Cantidad de múltiplos de 2: " + contador);
-            System.out.println("Suma de múltiplos de 2: " + suma);
-        } else {
-            System.out.println("Error: el segundo número debe ser mayor o igual que el primero.");
+            System.out.println("la cantidad de multiplos es: "+contar);
+            System.out.println("la suma de todos los multiplos: "+suma);
+        }else{
+            System.out.println("error el segundo tiene que ser igual o mayor");
         }
 
         sc.close();
+
+
     }
 }
